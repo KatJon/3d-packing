@@ -1,0 +1,19 @@
+DATASET = "example";
+INSTANCE = "000";
+
+WIDTH = 40;
+HEIGHT = 40;
+LENGTH = 40;
+
+NO_OF_SHAPES = 1;
+size = [|
+  20,20,20 |
+|];
+
+verticality = [|
+  0,0,1 |
+|];
+
+box_count = [
+  8,
+];

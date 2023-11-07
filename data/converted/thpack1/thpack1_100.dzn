@@ -1,0 +1,25 @@
+DATASET = "thpack1";
+INSTANCE = "100";
+
+WIDTH = 233;
+HEIGHT = 220;
+LENGTH = 587;
+
+NO_OF_SHAPES = 3;
+size = [|
+  78,49,47 |
+  46,45,43 |
+  98,44,36 |
+|];
+
+verticality = [|
+  1,1,1 |
+  1,1,1 |
+  0,1,1 |
+|];
+
+box_count = [
+  70,
+  75,
+  69,
+];

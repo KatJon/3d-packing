@@ -1,0 +1,25 @@
+DATASET = "example";
+INSTANCE = "002";
+
+WIDTH = 60;
+HEIGHT = 60;
+LENGTH = 60;
+
+NO_OF_SHAPES = 3;
+size = [|
+  20,20,30 |
+  20,20,20 |
+  20,20,10 |
+|];
+
+verticality = [|
+  0,0,1 |
+  0,1,1 |
+  1,1,1 |
+|];
+
+box_count = [
+  9,
+  9,
+  9,
+];

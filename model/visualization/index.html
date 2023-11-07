@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display packing layout</title>
+  <style>
+    #content {
+        display: flex;
+        height: 95vh;
+    }
+
+    #input {
+        min-width: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #input_text {
+        height: 100%;
+    }
+
+    #main {
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+
+    #description {
+        position: fixed;
+        width: 100%;
+        min-height: 40px;
+        z-index: 10;
+        padding: 5px;
+
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+  </style>
+  <script src="lib/p5.min.js"></script>
+  <script src="lib/p5.easycam.min.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <div id="input">
+            <textarea id="input_text"></textarea>
+            <button onclick="updateModel()">Update</button>
+        </div>
+        <main id="main">
+            <div id="description"></div>
+        </main>
+    </div>
+</body>
+</html>
