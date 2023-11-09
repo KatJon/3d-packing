@@ -65,7 +65,7 @@ def plot_dataset(data, title, getX, getY):
             s=9,
         )
     
-    plt.xlabel("Czas [s]")
+    plt.xlabel("Time [s]")
 
 get_time = lambda row: row[0]
 get_boxes = lambda row: row[1]
@@ -97,23 +97,23 @@ def print_table_row(name, data):
     print(f"{name} & {usage} & {boxes} & {vol} \\\\")
 
 for nam,data in datasets:
-    plot_dataset(data, f"{nam} wykorzystanie przestrzeni", 
+    plot_dataset(data, f"{nam} volume utilization", 
         get_time,
         get_usage,
     )
-    plt.ylabel("% wykorzystania przestrzeni",)
+    plt.ylabel("%% utilization",)
     plt.savefig(f"results/graphs/batch/{nam}_usage.png", dpi=250)
     plt.close()
 
-    plot_dataset(data, f"{nam} pozostawione przedmioty", 
+    plot_dataset(data, f"{nam} remaining items", 
         get_time,
         get_boxes,
     )
-    plt.ylabel("sztuki",)
+    plt.ylabel("items",)
     plt.savefig(f"results/graphs/batch/{nam}_boxes.png", dpi=250)
     plt.close()
 
-    plot_dataset(data, f"{nam} pozostawiony ładunek", 
+    plot_dataset(data, f"{nam} remaining payload", 
         get_time,
         get_vol,
     )

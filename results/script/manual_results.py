@@ -32,30 +32,30 @@ def draw_plot(X, Y, title, xlab, ylab, lin):
 
 maxus = max(usage)
 draw_plot(time, usage,
-    f"Użytkowanie przestrzeni max={maxus:.2f}%",
-    "Czas [s]",
-    "% wykorzystania przestrzeni",
+    f"Volume utilization max={maxus:.2f}%",
+    "Time [s]",
+    "%",
     maxus,
 )
-plt.savefig("results/graphs/usage.png")
+plt.savefig("results/graphs/manual/usage.png")
 plt.close()
 
 minbox = min(boxes)
 draw_plot(time, boxes,
-    f"Pozostawione pudełka min={minbox}",
-    "Czas [s]",
-    "sztuki",
+    f"Remaining items min={minbox}",
+    "Time [s]",
+    "items",
     minbox
 )
-plt.savefig("results/graphs/boxes.png")
+plt.savefig("results/graphs/manual/boxes.png")
 plt.close()
 
 minvol = min(vol)
 draw_plot(time, vol,
-    f"Pozostawiony ładunek min={minvol:.2f} m$^3$",
-    "Czas [s]",
+    f"Remaining volume min={minvol:.2f} m$^3$",
+    "Time [s]",
     "[m$^3$]",
     minvol
 )
-plt.savefig("results/graphs/volume.png")
+plt.savefig("results/graphs/manual/volume.png")
 plt.close()
